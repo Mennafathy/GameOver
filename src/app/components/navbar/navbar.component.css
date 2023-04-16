@@ -1,0 +1,53 @@
+.navbar
+{
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 1rem;
+}
+.navbar-brand
+{
+    margin-right: 0;
+    /* width: 70px; */
+}
+.nav-link
+{
+    color: #ffffff8c !important;
+   font-size: 20px !important;
+}
+.navbar-nav .nav-link.active
+{
+    color: #fff  !important;
+}
+.img-shadow
+{
+    text-shadow: 2px 2px 2px 2px rgb(121, 121, 224);
+}
+.navbar-nav .nav-form .login
+{
+    color: #ffffff8c !important;
+    font-size: 20px !important;
+}
+.navbar-nav .nav-form .join
+{
+    font-size: 20px !important;
+}
+ .login
+{
+    --bs-btn-border-color:#272b30;
+    --bs-btn-hover-border-color: #ffffff8c;
+    --bs-btn-hover-color:#272b30;
+    --bs-btn-active-color:#ffffff8c;
+    --bs-btn-active-bg: #272b30;
+    --bs-btn-active-border-color:#272b30;
+}
+.login:hover {
+    color: #ffffff8c !important;
+    background-color: #272b30 !important;
+} 
+.color-active
+{
+    color: #aaa !important;
+}
+/* .navbar
+{
+    --bs-navbar-padding-y: 5px;
+} */

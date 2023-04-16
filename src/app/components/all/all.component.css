@@ -1,0 +1,14 @@
+.allfont
+{
+    font-size: 20px;
+}
+.badgeStyle
+{
+    background-color: #aaa;
+    color: black;
+    border-radius: 10px;
+}
+.gameDiv
+{
+    height: 370px;
+}

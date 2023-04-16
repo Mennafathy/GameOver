@@ -1,0 +1,106 @@
+<section class="detailsPage" style="  background-image:
+linear-gradient(to bottom, rgba(2, 3, 12, 0.897), rgba(11, 8, 22, 0.911)),
+url('../../../assets/routeegypt_com/genshin-impact-1.jpg');">
+
+    <div class="container">
+        <div class="row py-5" >
+            <div class="col-md-4">
+               <div class="details-img">
+                <img [src]="productDetails.thumbnail" class="w-100 rounded rounded-3 mb-2" alt="" srcset="">
+                </div>
+                <div class="details-flags row justify-content-between align-items-center">
+                 <div class="col-3 col-lg-2 me-2">
+                   <div class="freeSpan">
+                    <span class="text-uppercase btn btn-dark">FREE</span>
+                   </div>
+                 </div>
+                 <div class="col me-0 ">
+                   <div class="playbtn py-2">
+                    <a [href]="productDetails.game_url" target="_blank" class="btn btn-playNow py-2 text-decoration-none w-100 text-uppercase fw-bold me-0 ">
+                        play now
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </a>
+                   </div>
+                 </div>
+                </div>
+               
+            </div>
+
+            <div class="col-md-8">
+                <h1 class="head-text text-capitalize">About {{productDetails.title}}</h1>
+                <h5 class="head-text text-capitalize mt-3 fw-bold">About Fall Guys</h5>
+                <p class="description head-text">{{productDetails.description}} </p>
+
+                        <h5 class="head-text fw-bold">Minimum System Requirements</h5> 
+                        <ul class="list-unstyled ms-2">
+                            <li class="py-2">
+                                <strong class="head-text sysReq">graphics : </strong>
+                               <span class="head-text">{{productDetails.minimum_system_requirements?.graphics}}</span>
+                            </li>
+                            <li class="py-2">
+                                <strong class="head-text sysReq">memory : </strong>
+                               <span class="head-text"> {{productDetails.minimum_system_requirements?.memory}}</span>
+                            </li>
+                            <li class="py-2">
+                                <strong class="head-text sysReq">os  : </strong>
+                               <span class="head-text"> {{productDetails.minimum_system_requirements?.os}}</span>
+                            </li>
+                            <li class="py-2">
+                                <strong class="head-text sysReq">processor : </strong>
+                               <span class="head-text"> {{productDetails.minimum_system_requirements?.processor}}</span>
+                            </li>
+                            <li class="py-2">
+                                <strong class="head-text sysReq">storage : </strong>
+                               <span class="head-text"> {{productDetails.minimum_system_requirements?.storage}}</span>
+                            </li>
+                        </ul>   
+                        
+                        <h4 class="head-text py-3">Fall Guys Screenshots</h4>
+                        <owl-carousel-o [options]="customOptions">
+
+                            <ng-container *ngFor="let imgSrc of imageSrc">
+                              <ng-template carouselSlide >
+                                <img [src]="imgSrc.image" class="W-100">
+                              </ng-template>
+                            </ng-container>
+                        
+                        </owl-carousel-o>
+
+                       <div class="addInfo py-4">
+                        <h4 class="h1 head-text">Additional Information</h4>
+                        <div class="info mt-3">
+                            <div class="row justify-content-evenly align-items-center">
+                                <div class="col-md-3 p-0 m-0">
+                                    <span class="text-muted infoHead">Title</span>
+                                    <p class="head-text infoContent">{{productDetails.title}}</p>
+                                </div>
+                                <div class="col-md-3 p-0 m-0">
+                                    <span class="text-muted infoHead">Developer</span>
+                                    <p class="head-text infoContent">{{productDetails.developer}}</p>
+                                </div>
+                                <div class="col-md-3 p-0 m-0">
+                                    <span class="text-muted infoHead">Publisher</span>
+                                    <p class="head-text infoContent">{{productDetails.publisher}}</p>
+                                </div>
+                            </div>
+                            <div class="row  justify-content-evenly align-items-center">
+                                <div class="col-md-3 p-0 m-0">
+                                    <span class="text-muted infoHead">Release Date</span>
+                                    <p class="head-text infoContent">{{productDetails.release_date}}</p>
+                                </div>
+                                <div class="col-md-3 p-0 m-0">
+                                    <span class="text-muted infoHead">Genre</span>
+                                    <p class="head-text infoContent">{{productDetails.genre}}</p>
+                                </div>
+                                <div class="col-md-3 p-0 m-0">
+                                    <span class="text-muted infoHead">Platform</span>
+                                    <p class="head-text infoContent"><i class="fab fa-windows" aria-hidden="true"></i> {{productDetails.platform}}</p>
+                                </div>
+                            </div>
+                        </div>
+                       </div> 
+            </div>
+        </div>
+    </div>
+
+</section>

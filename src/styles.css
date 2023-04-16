@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap');
+*
+{
+    box-sizing: border-box;
+}
+:root
+{
+    --main-color:#272b30;
+    --font-family:'Xanh Mono', monospace;
+    --border-bottom:1px solid rgba(28,28,28,.6);
+    --text-shadow:1px 1px 1px rgba(0,0,0,.3);
+}
+body
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--main-color);
+}
+
+.text-font
+{
+    font-family: var(--font-family);
+    font-weight: light;
+    color: white !important;
+    font-size: 25px !important;
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.br-btm
+{
+    border-bottom: var(--border-bottom);
+}
+.txt-shadow
+{
+    text-shadow: var(--text-shadow);
+}
+.registerBgColor, .loginBgColor
+{
+    background-color: #32383e;
+}
+.head-text
+{
+    color: #AAAAAA;
+}
+.form-control {
+    padding: 0.400rem 0.75rem ;
+}
+hr {
+    margin: 1rem 0;
+    border: 0;
+    border-top: 1px solid;
+    opacity: .25;
+    color:#AAAAAA
+}
+.form-control {
+    padding: 0.400rem 0.75rem ;
+    background-color: #1c1e22;
+    border: 0 solid rgba(0,0,0,.6);
+    border-radius: 5px;
+}
+.form-control:focus
+{
+    background-color: #1c1e22;
+}
+input
+{
+    color:#fff !important;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #3a3f44;
+    border-color: #22241d;
+}
+.btn:hover 
+{
+    background-color: #3a3f44;
+    border-color: #22241d ;
+}
+.freeStyle
+{
+    background-color: #4799eb;
+    border-radius:5px ;
+}
+.gameDiv
+{
+    background-color:#32383e ;
+    transition: transform .2s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+}
+.gameDiv:hover
+{
+    transform: scale(1.03);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}

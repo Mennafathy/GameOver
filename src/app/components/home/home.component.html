@@ -1,0 +1,33 @@
+<section class="homePage text-center">
+   <div class="container ">
+        <h1 class="head-text mt-5">Find & track the best <span class="spanColor">free-to-play</span> games!</h1>
+        <p class="text-muted">Track what you've played and search for what to play next! Plus get free premium loot!</p>
+         <button type="button" class="btn btn-outline-danger">Browse Games</button>   
+   </div>
+</section>
+
+
+<section>
+    <div class="container my-5">
+        <i class="fas fa-robot robotColor fa-2x"></i>
+        <span class="head-text h3">Personalized Recommendations</span>
+
+        <div class="row py-5 g-3">
+            <div class="col-md-4" *ngFor="let game of games">
+                <div class="gameDiv shadow shadow-lg ">
+                   <a  class="text-decoration-none"  href="" [routerLink]="['/productdetails',game.id]">
+                      <div class="game-img">
+                        <img [src]="game.thumbnail" class="w-100" alt="" srcset="">
+                      </div>
+                      <div class="game-body p-3 d-flex justify-content-between align-items-center">
+                        <h3 class="text-capitalize head-text">{{game.title}}</h3>
+                        <span class="text-uppercase freeStyle text-white px-2 " >free</span>
+                      </div>
+                   </a>
+                </div>
+            </div>
+          
+            
+        </div>
+    </div>
+</section>

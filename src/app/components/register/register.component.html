@@ -1,0 +1,72 @@
+<section class="vh-100 d-flex align-items-center justify-content-center">
+    <div class="container shadow-lg">
+        <div class="row ">
+            <div class="col-md-6 imgRegister px-0">
+            </div>
+
+            <div class="col-md-6 registerBgColor py-4">
+                <form class="row text-center" [formGroup]="registerForm" (ngSubmit)="HandleRegister(registerForm)">
+                    <h1 class="text-capitalize head-text h2">Create My Account!</h1>
+                    <div class="col-md-12">
+                        <input type="text" formControlName="name" name="" placeholder="Name" class="form-control mt-4" id="">
+                        <div *ngIf="registerForm.get('name')?.errors &&registerForm.get('name')?.touched" class="alert alert-warning p-0 m-0">
+                            <p *ngIf="registerForm.get('name')?.getError('required')"> Name is Required</p>
+                            <p *ngIf="registerForm.get('name')?.getError('minlength')"> Name must be between 3 and 20 charcters</p>
+                            <p *ngIf="registerForm.get('name')?.getError('maxlength')">Name must be between 3 and 20 charcters</p>
+                        </div>
+                    </div>
+                   
+         
+                    <div class="col-12">
+                        <input type="email" formControlName="email" name="" placeholder="Email" class="form-control mt-4" id="">
+                        <div *ngIf="registerForm.get('email')?.errors &&registerForm.get('email')?.touched" class="alert alert-warning p-0 m-0">
+                            <p *ngIf="registerForm.get('email')?.getError('required')">Email is Required</p>
+                            <p *ngIf="registerForm.get('email')?.getError('email')">Enter valid email</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <input type="password" formControlName="password" name="" placeholder="password" class="form-control mt-4" id="">
+                        <div *ngIf="registerForm.get('password')?.errors &&registerForm.get('password')?.touched" class="alert alert-warning p-0 mt-1 mb-0">
+                            <p *ngIf="registerForm.get('password')?.getError('required')">Password is Required</p>
+                            <p *ngIf="registerForm.get('password')?.getError('minlength')">Min length is 8 characters</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="password" formControlName="rePassword" name="" placeholder="rePassword" class="form-control mt-4" id="">
+                        <div *ngIf="registerForm.get('rePassword')?.errors &&registerForm.get('rePassword')?.touched" class="alert alert-warning p-0 mt-1 mb-0">
+                            <p *ngIf="registerForm.get('rePassword')?.getError('required')">rePassword is Required</p>
+                            <p *ngIf="registerForm.get('rePassword')?.getError('minlength')">Min length is 8 characters</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="tel" formControlName="phone" name="" placeholder="phone" class="form-control mt-4" id="">
+                        <div *ngIf="registerForm.get('phone')?.errors &&registerForm.get('phone')?.touched" class="alert alert-warning p-0 mt-1 mb-0">
+                            <p *ngIf="registerForm.get('phone')?.getError('required')">Phone is Required</p>
+                            <p *ngIf="registerForm.get('phone')?.getError('pattern')">Enter Valid Phone Number</p>
+                        </div>
+                    </div>
+                   
+                   
+
+                    <div class="col-md-12">
+                        <button type="submit" class="btn w-100 mt-3 mb-1 btn-primary text-white">
+                            <i *ngIf="isLoading" class="fas fa-spinner fa-spin text-white"></i>
+                            <span *ngIf="!isLoading">Create Account</span>
+                        </button>
+              
+                        <small class="text-muted mb-0">This site is protected by reCAPTCHA and the Google <a href="" class="AnchColor">Privacy Policy</a> and <a href="" class="AnchColor">Terms of Service </a> apply.</small>
+                        <hr>
+                    </div>
+                    <div class="regBtm">
+                        <span class="Memb fs-sm">Already a Member? </span><a href="" class="text-decoration-none loginAnch" routerLink="/login">Login></a>
+                    </div>
+    
+    
+                </form>
+             
+            </div>
+        </div>
+    </div>
+</section>

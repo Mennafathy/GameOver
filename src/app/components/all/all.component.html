@@ -1,0 +1,30 @@
+ <section>
+     <div class="container my-5">
+         <div class="row py-5 g-3">
+             <div class="col-3 col-lg-3 col-sm-12" *ngFor="let game of games">
+                 <div class="gameDiv shadow shadow-lg ">
+                    <a  class="text-decoration-none"  href="" [routerLink]="['/productdetails',game.id]">
+                       <div class="game-img">
+                         <img [src]="game.thumbnail" class="w-100" alt="" srcset="">
+                       </div>
+                       <div class="game-body p-3 d-flex justify-content-between align-items-center">
+                         <h3 class="text-capitalize head-text">{{game.title}}</h3>
+                         <span class="text-uppercase freeStyle text-white px-2 " >free</span>
+                       </div>
+                       <span class="text-muted px-3 allfont">{{game.short_description.split(" ").slice(0,3).join(" ")}}..</span>
+                       
+                       <div class="game-body p-3 d-flex justify-content-between align-items-center">
+                        <i class="fa-solid fa-plus head-text"></i>
+                       <div class="badgeGenre">
+                        <span class="text-uppercase badgeStyle p-1 me-2" >{{game.genre}}</span>
+                        <i class="fab fa-windows head-text "></i>
+                       </div>
+                      </div>
+                    </a>
+                 </div>
+             </div>
+           
+             
+         </div>
+     </div>
+ </section>
